@@ -22,6 +22,8 @@ dependencies {
     implementation("io.quarkus:quarkus-kotlin")
     implementation("io.quarkus:quarkus-jackson")
     implementation("io.quarkus:quarkus-amazon-lambda")
+
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 }
 
 
