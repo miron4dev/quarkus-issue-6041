@@ -25,3 +25,8 @@ com.fasterxml.jackson.databind.exc.InvalidDefinitionException: Cannot construct 
         at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
         at java.lang.reflect.Method.invoke(Method.java:498)
 ```
+
+## Workaround
+
+Annotate `objectMapper` producer method by `@io.quarkus.arc.Unremovable` annotation.
+See [JacksonConfiguration](https://github.com/miron4dev/quarkus-issue-6041/blob/master/src/main/kotlin/com/miron4dev/JacksonConfiguration.kt#L13)
