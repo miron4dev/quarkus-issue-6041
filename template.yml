@@ -1,0 +1,16 @@
+  AWSTemplateFormatVersion: '2010-09-09'
+  Transform: AWS::Serverless-2016-10-31
+  Description: Test
+  Globals:
+    Function:
+      Timeout: 20
+  Resources:
+    TestFunction:
+      Type: AWS::Serverless::Function
+      Properties:
+        FunctionName: TestFunction
+        CodeUri: build/quarkus-issue-6041-1.0-SNAPSHOT-runner.jar
+        Handler: io.quarkus.amazon.lambda.runtime.QuarkusStreamHandler::handleRequest
+        Runtime: java8
+        MemorySize: 128
+        Policies: AWSLambdaBasicExecutionRole
